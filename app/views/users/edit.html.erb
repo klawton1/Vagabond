@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "#{@user.name}" %>
+  </div>
+  <div>
+    <%= f.text_field :current_city, placeholder: "#{@user.current_city}" %>
+  </div>
+  <div>
+    <%= f.text_field :email, placeholder: "#{@user.email}" %>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "#{@user.password}" %>
+  </div>
+  <%= f.submit "Sign Up"  %>
+<% end %>

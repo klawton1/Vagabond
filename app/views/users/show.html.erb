@@ -5,7 +5,7 @@
     <%= image_tag "http://www.eurogeosurveys.org/wp-content/uploads/2014/02/default_profile_pic.jpg", alt: "Profile Pic", size: "150x200"%>
   <%end%>  
   <p><%= @user.name%></p>
-  <p>Date Joined: <%= @user.created_at%></p>
+  <p>Date Joined: <%= @user.created_at.strftime('%c')%></p>
   <p>Current City: <%= @user.current_city%></p>
 </div>
 <div class="col-md-8 col-md-8 col-md-8 col-md-8">
