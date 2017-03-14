@@ -3,12 +3,21 @@
   <head>
     <title>Vagabond</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
+    <div class="text-right">
+      <p class="text-left">Vagabond</p>
+      <button class="btn btn-default">Sign Up</button>
+      <button class="btn btn-default">Profile</button>
+      <button class="btn btn-default">Log In</button>
+      <button class="btn btn-default">Log Out</button>
+    </div> 
     <%= yield %>
+    </div>
   </body>
 </html>
