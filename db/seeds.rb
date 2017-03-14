@@ -12,3 +12,4 @@ cities = City.create([
 	{ name: "Gibraltar", image:"#"}
 	])
 
+
