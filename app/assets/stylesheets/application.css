@@ -14,9 +14,10 @@
  *= require_self
  */
 
-h1 {
+h1,h3, .navbar-brand {
+	text-shadow: black 2px 2px 2px;
+	color: #FFCABC;
 	font-family: 'Rock Salt', cursive;
-/*	font-family: 'Nobile', sans-serif;*/
 }
 ul:last-child{
 	padding-right: 10px;
@@ -27,16 +28,46 @@ img{
 }
 
 body{
-	background: #FFF7F4;
+	background: #FFCABC;
 }
 
 .banner {
     position: relative;
+    box-shadow: grey 5px 5px 20px;
 }
 
 .bottomright {
-		color: #FFF7F4;
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.thumbnail{
+	box-shadow: grey 5px 5px 20px;
+	background: #32B29E;
+	padding: 5px;
+	margin-right: 5%;
+}
+
+.navbar{
+	background: #32B29E;
+}
+
+#header, #links{
+	color: #FFA07A;
+}
+#header:hover, #links:hover{
+	color: #FFCABC;
+}
+
+.citi{
+	text-shadow: grey 2px 2px 2px;
+	font-family: 'Nobile', sans-serif;
+	color: #FFCABC;
+}
+
+.square{
+	box-shadow: grey 2px 2px 2px;
+	height: 350px;
+	width: 350px;
 }
