@@ -6,10 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.delete_all
+City.delete_all
 cities = City.create([
-	{ name: "San Francisco", image: "#"}, 
-	{ name: "London", image: "#"},
-	{ name: "Gibraltar", image:"#"}
-	])
+  { name: "San Francisco", image: "#"}, 
+  { name: "London", image: "#"},
+  { name: "Gibraltar", image:"#"}
+  ])
+
+users = User.create([
+  {name: "Kody Lawton", email: "k@l", password: "123"},
+  {name: "Regelyn Cacho", email: "r@c", password: "123"},
+  {name: "Ivan Miranda", email: "i@m", password: "123"}
+])
 
 
