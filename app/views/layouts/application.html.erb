@@ -3,20 +3,33 @@
   <head>
     <title>Vagabond</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Nobile|Rock+Salt" rel="stylesheet">
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container">
-    <div class="text-right">
-      <p class="text-left">Vagabond</p>
-      <button class="btn btn-default">Sign Up</button>
-      <button class="btn btn-default">Profile</button>
-      <button class="btn btn-default">Log In</button>
-      <button class="btn btn-default">Log Out</button>
-    </div> 
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Vagabond</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign Up</a>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+      </nav>
+
+        <div class="banner">
+        <img class="img-responsive" src="https://d2ic969nxgkjnx.cloudfront.net/images/vroomvroomvroom-com-au/cms/canada-rv-rental-fall-season.jpg">
+        <h1 class=bottomright>Vagabond</h1>
+          
+        </div>
+
+      </div> 
     <%= yield %>
     </div>
   </body>
