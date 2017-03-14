@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+	font-family: 'Rock Salt', cursive;
+/*	font-family: 'Nobile', sans-serif;*/
+}
+ul:last-child{
+	padding-right: 10px;
+}
+
+img{
+	margin-top: 10px;
+}
+
+body{
+	background: #FFF7F4;
+}
+
+.banner {
+    position: relative;
+}
+
+.bottomright {
+		color: #FFF7F4;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
