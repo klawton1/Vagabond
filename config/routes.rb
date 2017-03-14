@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   put '/users/:id', to: 'users#update', as: 'update_user'
 
 
-  get '/cities/:id', to: 'cities#show', as 'city'
+  get '/cities/:id', to: 'cities#show', as: 'city'
 
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
