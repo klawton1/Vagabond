@@ -1,7 +1,7 @@
 <%= render "layouts/banner" %>
 <div class="row">
   <div class="col-md-4 col-md-4 col-md-4 col-md-4">
-    <%= image_tag @user.image, alt: "Profile Pic", size: "150x200"%>
+    <%= image_tag @comment.user.image, alt: "Profile Pic", size: "150x200"%>
     <p><%= @comment.user.name%></p>
     <p>Date Joined: <%= @comment.user.created_at.strftime('%c')%></p>
     <p>Current City: <%= @comment.user.current_city%></p>
