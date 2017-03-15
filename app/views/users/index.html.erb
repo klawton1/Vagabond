@@ -1,8 +1,10 @@
+<%= render "layouts/banner" %>
+
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1 col-lg-4 thumbnail">
       <img class="square img-responsive" src="http://lghttp.60358.nexcesscdn.net/8046264/images/page/-/100rc/img/cities/cities-sanfran_optimized.jpg">
       <hr>
-      <h3 class="text-center"><%= link_to "#{@cities[0].name}", city_path(@cities[0])%></h3>
+      <h3 class="text-center"><%= link_to "#{@cities[0].name}", city_path(@cities[0]), id: "city-name"%></h3>
       <p class="citi text-center">Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -13,7 +15,7 @@
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 thumbnail">
       <img class="square img-responsive" src="https://i.ytimg.com/vi/piODyzjIK7Y/maxresdefault.jpg">
       <hr>
-      <h3 class="text-center"><%= link_to "#{@cities[1].name}", city_path(@cities[1])%></h3>
+      <h3 class="text-center"><%= link_to "#{@cities[1].name}", city_path(@cities[1]), id: "city-name"%></h3>
       <p class="citi text-center">Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -24,7 +26,7 @@
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 thumbnail">
       <img class="square img-responsive" src="http://www.maritimelondon.com/wp-content/uploads/2015/08/Gibraltar-Panoramic-web.jpg">
       <hr>
-      <h3 class="text-center"><%= link_to "#{@cities[2].name}", city_path(@cities[2])%></h3>
+      <h3 class="text-center"><%= link_to "#{@cities[2].name}", city_path(@cities[2]), id: "city-name"%></h3>
       <p class="citi text-center">Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
