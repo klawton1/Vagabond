@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
   	@users = User.all
+    @cities = City.all
   end
 
   def new
@@ -15,6 +16,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
+    if @user != current_user
+      redirect_to root_path
+    end
   end
 
   def edit

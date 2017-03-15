@@ -1,13 +1,21 @@
-<div class="col-md-4 col-md-4 col-md-4 col-md-4">
-  <%if @user.image%>
-    <%= image_tag @user.image, alt: "Profile Pic", size: "150x200"%>
-  <%else%>
-    <%= image_tag "http://www.eurogeosurveys.org/wp-content/uploads/2014/02/default_profile_pic.jpg", alt: "Profile Pic", size: "150x200"%>
-  <%end%>  
-  <p><%= @user.name%></p>
-  <p>Date Joined: <%= @user.created_at.strftime('%c')%></p>
-  <p>Current City: <%= @user.current_city%></p>
+<div class="row">
+  <div class="col-md-4 col-md-4 col-md-4 col-md-4">
+    <%if @user.image%>
+      <%= image_tag @user.image, alt: "Profile Pic", size: "150x200"%>
+    <%else%>
+      <%= image_tag "http://www.eurogeosurveys.org/wp-content/uploads/2014/02/default_profile_pic.jpg", alt: "Profile Pic", size: "150x200"%>
+    <%end%>  
+    <p><%= @user.name%></p>
+    <p>Date Joined: <%= @user.created_at.strftime('%c')%></p>
+    <p>Current City: <%= @user.current_city%></p>
+  </div>
+  <div class="col-md-8 col-md-8 col-md-8 col-md-8">
+    <% @user.comments.each do |comment| %>
+      <div>
+        <h3><%= comment.title%></h3>
+        <p><%= comment.text%></p>
+      </div> 
+    <% end %>
+  </div>
 </div>
-<div class="col-md-8 col-md-8 col-md-8 col-md-8">
-  
-</div>
+<%= link_to "Edit Profile", edit_user_path(@user)%>

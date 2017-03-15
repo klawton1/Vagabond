@@ -1,0 +1,8 @@
+<h2><%= @city.name %></h2>
+<% @city.comments.each do |comment| %>
+  <div>
+    <h4><%= comment.user.name %>:</h4>
+    <h3><%= comment.title%></h3>
+    <p><%= comment.text%></p>
+  </div> 
+<% end %>

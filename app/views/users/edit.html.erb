@@ -1,15 +1,20 @@
+<%if @user.image%>
+      <%= image_tag @user.image, alt: "Profile Pic", size: "150x200"%>
+    <%else%>
+      <%= image_tag "http://www.eurogeosurveys.org/wp-content/uploads/2014/02/default_profile_pic.jpg", alt: "Profile Pic", size: "150x200"%>
+    <%end%>
 <%= form_for @user do |f| %>
   <div>
-    <%= f.text_field :name, placeholder: "#{@user.name}" %>
+    <label>Name:</label><br><%= f.text_field :name, placeholder: "#{@user.name}" %>
   </div>
   <div>
-    <%= f.text_field :current_city, placeholder: "#{@user.current_city}" %>
+    <label>Current City:</label><br><%= f.text_field :current_city, placeholder: "#{@user.current_city}" %>
   </div>
   <div>
-    <%= f.text_field :email, placeholder: "#{@user.email}" %>
+    <label>Email:</label><br><%= f.text_field :email, placeholder: "#{@user.email}" %>
   </div>
   <div>
-    <%= f.password_field :password, placeholder: "#{@user.password}" %>
+    <label>Password:</label><br><%= f.password_field :password, placeholder: "#{@user.password}" %>
   </div>
-  <%= f.submit "Sign Up"  %>
+  <%= f.submit "Save"  %>
 <% end %>
