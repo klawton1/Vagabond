@@ -1,4 +1,8 @@
-<h2><%= @city.name %></h2>
+<% if @city.name === "San Francisco" %>
+	<img class="img-responsive" src="http://turism.bzi.ro/public/upload/photos/32/Podul_Golden_Gate1.jpg">
+<% end %>
+
+<h2 id="cidade"><%= @city.name %></h2>
 <% @city.comments.each do |comment| %>
   <div>
     <h4><%= comment.user.name %>:</h4>
