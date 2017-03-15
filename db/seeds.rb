@@ -15,9 +15,9 @@ cities = City.create([
   ])
 
 users = User.create([
-  {name: "Kody Lawton", email: "k@l", password: "123"},
-  {name: "Regelyn Cacho", email: "r@c", password: "123"},
-  {name: "Ivan Miranda", email: "i@m", password: "123"}
+  {name: "Kody Lawton", email: "k@l", password: "123", current_city: "San Francisco"},
+  {name: "Regelyn Cacho", email: "r@c", password: "123", current_city: "San Francisco"},
+  {name: "Ivan Miranda", email: "i@m", password: "123", current_city: "San Francisco"}
 ])
 
 
