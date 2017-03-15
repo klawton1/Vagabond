@@ -10,7 +10,12 @@
     <p>Current City: <%= @user.current_city%></p>
   </div>
   <div class="col-md-8 col-md-8 col-md-8 col-md-8">
-    
+    <% @user.comments.each do |comment| %>
+      <div>
+        <h3><%= comment.title%></h3>
+        <p><%= comment.text%></p>
+      </div> 
+    <% end %>
   </div>
 </div>
 <%= link_to "Edit Profile", edit_user_path(@user)%>
