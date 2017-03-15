@@ -12,7 +12,7 @@
   <div class="col-md-8 col-md-8 col-md-8 col-md-8">
     <% @user.comments.each do |comment| %>
       <div>
-        <h3><%= comment.title%></h3>
+        <h3><%= link_to "#{comment.title}", comment_path(comment) %></h3>
         <p><%= comment.text%></p>
       </div> 
     <% end %>
