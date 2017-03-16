@@ -5,17 +5,17 @@
 <h2 class="text-center"><%= link_to "Add A New Comment", new_comment_path(@city)%></h2>
 <% @city.comments.each do |comment| %>
   <div class="thumbnail row">
-  	<figure class="figure col-md-2">
-  		<%= image_tag comment.user.image, class: "profile rounded figure-img img-fluid"%>
-  		<figcaption class="caption comment figure-caption"><%= comment.user.name %></figcaption>
-  	</figure>
-  	<div class="col-md-9 col-md-offset-1">
-	    <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
-	    <hr>
+    <figure class="figure col-md-2">
+      <%= image_tag comment.user.image, class: "profile rounded figure-img img-fluid"%>
+      <figcaption class="caption comment figure-caption"><%= comment.user.name %></figcaption>
+    </figure>
+    <div class="col-md-9 col-md-offset-1">
+      <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
+      <hr>
       <p class="comment"><%= comment.text%></p>
       <% if current_user%>
         <%= link_to "", edit_comment_path(comment), class: "editBtn"%>
-        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete' %>
+        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete', data: {:confirm => 'Are you sure you want to delete this?'} %>
       <%end%>
     </div>
   </div> 
