@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/comments/:id', to: 'comments#show', as: 'comment'
   get '/comments/:id/edit', to: 'comments#edit', as: 'edit_comment'
   patch '/comments/:id', to: 'comments#update'
-  delete '/comments/:id/delete', to: 'comment#destroy'
+  delete '/comments/:id', to: 'comments#destroy'
 
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
