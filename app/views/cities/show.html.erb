@@ -14,7 +14,7 @@
 	    <hr>
       <p class="comment"><%= comment.text%></p>
       <% if current_user%>
-        <%= link_to "Edit Comment", edit_comment_path(comment)%>
+        <%= link_to "", edit_comment_path(comment), class: "editBtn"%>
         <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete' %>
       <%end%>
     </div>
