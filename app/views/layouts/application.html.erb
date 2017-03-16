@@ -4,6 +4,7 @@
     <title>Vagabond</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Nobile|Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -41,7 +42,6 @@
       <% flash.each do |name, msg| %>
         <%= name.capitalize %>: <%= msg %>
       <% end %>
-
 
     <%= yield %>
     </div>

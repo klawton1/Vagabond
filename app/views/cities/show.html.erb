@@ -1,12 +1,25 @@
 <% if @city.name === "San Francisco" %>
-	<img class="img-responsive" src="http://turism.bzi.ro/public/upload/photos/32/Podul_Golden_Gate1.jpg">
+	<img class="img-responsive show-city" src="http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/field/image/site-photo.jpg">
+<% end %>
+<% if @city.name === "London" %>
+	<img class="img-responsive show-city" src="http://ucfb.com/wp-content/uploads/2014/12/London-banner.jpg">
+<% end %>
+<% if @city.name === "Gibraltar" %>
+	<img class="img-responsive show-city" src="http://www.category2.com/wp-content/uploads/2017/01/cropped-gb-17.jpg">
 <% end %>
 
 <h2 id="cidade"><%= @city.name %></h2>
+<br>
 <% @city.comments.each do |comment| %>
-  <div>
-    <h4><%= comment.user.name %>:</h4>
-    <h3><%= comment.title%></h3>
-    <p><%= comment.text%></p>
+  <div class="thumbnail row">
+  	<figure class="figure col-md-2">
+  		<%= image_tag comment.user.image, class: "profile rounded figure-img img-fluid"%>
+  		<figcaption class="caption comment figure-caption"><%= comment.user.name %></figcaption>
+  	</figure>
+  	<div class="col-md-9 col-md-offset-1">
+	    <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
+	    <hr>
+	    <p class="comment"><%= comment.text%></p>
+  	</div>
   </div> 
 <% end %>
