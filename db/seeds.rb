@@ -13,9 +13,9 @@ sf = City.create({ name: "San Francisco", image: "http://www.sftravel.com/sites/
 london = City.create({ name: "London", image: "http://ucfb.com/wp-content/uploads/2014/12/London-banner.jpg"})
 gib = City.create({ name: "Gibraltar", image:"http://www.category2.com/wp-content/uploads/2017/01/cropped-gb-17.jpg"})
 
-kody = User.create({ name: "Kody Lawton", email: "k@l", password: "123", current_city: "San Francisco"})
+kody = User.create({ name: "Kody Lawton", email: "k@l", password: "123", current_city: "San Francisco", image: "https://tse1.mm.bing.net/th?id=OIP._NbvGs2a0L-dAarZKYu9lQEsDx&w=249&h=198&c=7&qlt=90&o=4&pid=1.7"})
 reg = User.create({ name: "Regelyn Cacho", email: "r@c", password: "123", current_city: "San Francisco"})
-ivan = User.create({ name: "Ivan Miranda", email: "i@m", password: "123", current_city: "San Francisco"})
+ivan = User.create({ name: "Ivan Miranda", email: "i@m", password: "123", current_city: "San Francisco", image: "https://lh3.googleusercontent.com/0a3S_7nhJUS70krz1hloB1QwukmY33yuQxit_2yhEqbzMa0ognxkdeeOZD59VmeVcNCr3-_7M1zKZJy7DgeBoLE3Qs043Psyde0MIHe77PplblKHDvf_wZPcEMrCBAToVVbtJFJEpegx0VDLj_EUPEjlEp-InQCd1djDXdkPZnceLvebiLP8gqB69R1R-kv_2lfN7kk2pMwi7dkQydZ7iZ0qraksgAZQqsNDbZyY8HBQeMdps1OSzPWzfJzfLwKZCpfUc0WjhBp8RHUZN8DV8uibKgx80LXC3bV5UEuVf40Lz9lxWUE-3BQ1HlQjaTpsO4fADGyZDwclkGY5b9GROL1RNBAM5K7cj354SKPIR0mKWHqW4JokSsh9AhUaMHTThPECwYw3uVIjybOcJ5Y8N0ZBYmIl6hs6JGuMbUkCggwpN6SP84Xyi602s-jXf-4rC9H7vf7vlOoN9MUusQQeslUU2WLj8T8im3VC7A5NTizuAhpC6jPXuQRXuaT1MkpbNOBGlrM90YsM-kJ63Wr9Uz6P9bxmIYxk5G87lZPgdy1_EfkJignpH78Tjkf15N_CwpOS6DWM1hpmvhVhKyUW4GBWg7TjOwpmK7xTYF6ozRkz8Yy0dzfRAMlucyZ7SjFteZW1fejvKkN403iOmlxPoQCvleOf30XEfzKHn9Udsw=w1215-h694-no"})
 
 com1 = Comment.create(
   { title: "Avoid The Park Bathrooms...", text: "Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
