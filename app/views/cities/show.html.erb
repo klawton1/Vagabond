@@ -15,7 +15,7 @@
       <p class="comment"><%= comment.text%></p>
       <% if current_user%>
         <%= link_to "", edit_comment_path(comment), class: "editBtn"%>
-        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete', data: {:confirm => 'Are you sure you want to delete #{comment.title}?'} %>
+        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete', data: {:confirm => 'Are you sure you want to delete this?'} %>
       <%end%>
     </div>
   </div> 
