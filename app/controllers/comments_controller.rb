@@ -3,7 +3,18 @@ class CommentsController < ApplicationController
     @comment = Comment.find_by_id(params[:id])
   end
   def edit
-    
+    @comment = Comment.find_by_id(params[:id])
+  end
+
+  def update
+    @comment = Comment.find_by_id(params[:id])
+    @comment.update(comment_params)
+    if !@comment.save
+      flash[:error] = "Bad Update to comments"
+      redirect_to root_path
+    end
+    redirect_to comment_path(@comment)
+
   end
   def new
     if !current_user

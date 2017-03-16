@@ -13,5 +13,5 @@
       <p><%= @comment.text %></p>
     </div> 
   </div>
-
+  <%= link_to "#{@comment.city.name} Page", city_path(@comment.city)%>
 </div>

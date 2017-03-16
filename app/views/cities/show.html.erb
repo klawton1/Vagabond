@@ -2,6 +2,7 @@
 
 <h2 id="cidade"><%= @city.name %></h2>
 <br>
+<h2 class="text-center"><%= link_to "Add A New Comment", new_comment_path(@city)%></h2>
 <% @city.comments.each do |comment| %>
   <div class="thumbnail row">
   	<figure class="figure col-md-2">
@@ -11,7 +12,8 @@
   	<div class="col-md-9 col-md-offset-1">
 	    <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
 	    <hr>
-	    <p class="comment"><%= comment.text%></p>
-  	</div>
+      <p class="comment"><%= comment.text%></p>
+      <%= link_to "Edit Comment", edit_comment_path(comment)%>
+    </div>
   </div> 
 <% end %>
