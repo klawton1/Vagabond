@@ -1,18 +1,19 @@
 <%= render "layouts/banner" %>
 <div class="row">
-  <div class="col-md-4 col-md-4 col-md-4 col-md-4">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <%= image_tag @comment.user.image, alt: "Profile Pic", size: "200x200"%>
     <p><%= @comment.user.name%></p>
-    <p>Date Joined: <%= @comment.user.created_at.strftime('%c')%></p>
+    <p>Date Joined: <%= time_tag @comment.user.created_at%></p>
     <p>Current City: <%= @comment.user.current_city%></p>
   </div>
 
-  <div class="col-md-8 col-md-8 col-md-8 col-md-8">
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
     <h4><%= @comment.user.name%> about <%= @comment.city.name%>:</h4>
     <div>
       <h3><%= @comment.title %></h3>
       <p><%= @comment.text %></p>
     </div> 
+    <%= time_tag @comment.user.created_at%>
   </div>
-  <%= link_to "#{@comment.city.name} Page", city_path(@comment.city)%>
+  <%= link_to "#{@comment.city.name} Page", city_path(@comment.city), :class => "btn btn-default"%>
 </div>
