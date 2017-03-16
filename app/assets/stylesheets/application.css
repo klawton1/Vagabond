@@ -114,3 +114,4 @@ body{
 }
 
 .editBtn:before   { content: "\270E"; }
+.deleteBtn:before {content: "\2718";}

@@ -13,9 +13,10 @@
       <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
       <hr>
       <p class="comment"><%= comment.text%></p>
+      <p> <%= "Updated #{time_ago_in_words(comment.updated_at)} ago"%></p>
       <% if current_user && current_user == comment.user%>
-        <%= link_to "", edit_comment_path(comment), class: "editBtn"%>
-        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete', data: {:confirm => 'Are you sure you want to delete '+ comment.title + "?"} %>
+        <%= link_to "Edit", edit_comment_path(comment), class: "editBtn btn btn-default"%>
+        <%= link_to "Delete", comment_path(comment), method: 'delete', class: "btn btn-default deleteBtn", data: {:confirm => 'Are you sure you want to delete '+ comment.title + "?"} %>
       <%end%>
     </div>
   </div> 
