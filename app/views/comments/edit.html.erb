@@ -1,0 +1,13 @@
+<h2>Edit Comment</h2>
+<%= form_for @comment do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div>
+    <%= f.text_area :text, placeholder: "Add a review here" %>
+  </div>
+  <%= hidden_field_tag('city_id', @city_id)%>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<%= link_to "Back to City", city_path(@comment.city)%>

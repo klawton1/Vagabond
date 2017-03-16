@@ -1,10 +1,9 @@
 <%= render "layouts/banner" %>
-<%if @user.image%>
-      <%= image_tag @user.image, alt: "Profile Pic", size: "150x200"%>
-    <%else%>
-      <%= image_tag "http://www.eurogeosurveys.org/wp-content/uploads/2014/02/default_profile_pic.jpg", alt: "Profile Pic", size: "150x200"%>
-    <%end%>
+<%= image_tag @user.image, size: "200x200"%>
 <%= form_for @user do |f| %>
+  <div>
+    <label>Image:</label><br><%= f.text_field :image, placeholder: "#{@user.image}" %>
+  </div>
   <div>
     <label>Name:</label><br><%= f.text_field :name, placeholder: "#{@user.name}" %>
   </div>

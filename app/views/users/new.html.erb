@@ -3,16 +3,16 @@ Sign Up
 
 <%= form_for @user do |f| %>
   <div>
-    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :name, placeholder: "Name", required: true %>
   </div>
   <div>
-    <%= f.text_field :current_city, placeholder: "City" %>
+    <%= f.text_field :current_city, placeholder: "City", required: true %>
   </div>
   <div>
-    <%= f.text_field :email, placeholder: "Email" %>
+    <%= f.text_field :email, placeholder: "Email", required: true %>
   </div>
   <div>
-    <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.password_field :password, placeholder: "Password", required: true %>
   </div>
   <%= f.submit "Sign Up" %>
 <% end %>

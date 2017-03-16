@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post '/comments', to: 'comments#create'
   get '/comments/:id', to: 'comments#show', as: 'comment'
   get '/comments/:id/edit', to: 'comments#edit', as: 'edit_comment'
+  patch '/comments/:id', to: 'comments#update'
   delete '/comments/:id/delete', to: 'comment#destroy'
 
   get '/login', to: 'sessions#new'
