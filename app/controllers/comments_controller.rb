@@ -28,7 +28,12 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     current_user.comments << @comment
     @city.comments << @comment
-    redirect_to comment_path(@comment)
+    if @comment.text.length < 1 || (@comment.title.length < 1 || @comment.title.length > 200)
+      flash[:Error] = "Title length : 1-200 characters. Comment length: Cannot be empty."
+      redirect_to new_comment_path(params[:city_id])
+    else
+      redirect_to comment_path(@comment)
+    end
   end
 
   def destroy
