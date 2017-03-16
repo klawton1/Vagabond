@@ -1,12 +1,4 @@
-<% if @city.name === "San Francisco" %>
-	<img class="img-responsive show-city" src="http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/field/image/site-photo.jpg">
-<% end %>
-<% if @city.name === "London" %>
-	<img class="img-responsive show-city" src="http://ucfb.com/wp-content/uploads/2014/12/London-banner.jpg">
-<% end %>
-<% if @city.name === "Gibraltar" %>
-	<img class="img-responsive show-city" src="http://www.category2.com/wp-content/uploads/2017/01/cropped-gb-17.jpg">
-<% end %>
+<%= image_tag @city.image, class: "img-responsive show-city"%>
 
 <h2 id="cidade"><%= @city.name %></h2>
 <br>
