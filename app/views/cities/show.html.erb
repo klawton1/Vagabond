@@ -13,8 +13,10 @@
 	    <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
 	    <hr>
       <p class="comment"><%= comment.text%></p>
-      <%= link_to "Edit Comment", edit_comment_path(comment)%>
-      <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete' %>
+      <% if current_user%>
+        <%= link_to "Edit Comment", edit_comment_path(comment)%>
+        <%= link_to image_tag("http://www.clker.com/cliparts/L/8/M/t/O/G/delete-button-blue-hi.png", size: "80x30"), comment_path(comment), method: 'delete' %>
+      <%end%>
     </div>
   </div> 
 <% end %>
