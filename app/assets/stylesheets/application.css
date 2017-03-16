@@ -112,3 +112,5 @@ body{
 .caption{
 	text-shadow: black 2px 2px 2px;
 }
+
+.editBtn:before   { content: "\270E"; }

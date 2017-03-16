@@ -13,7 +13,7 @@
 	    <h3><%= link_to comment.title, comment_path(comment), class: "comment text-center"%></h3>
 	    <hr>
       <p class="comment"><%= comment.text%></p>
-      <%= link_to "Edit Comment", edit_comment_path(comment)%>
+      <%= link_to "", edit_comment_path(comment), class: "editBtn"%>
     </div>
   </div> 
 <% end %>
