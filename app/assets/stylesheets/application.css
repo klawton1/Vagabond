@@ -14,7 +14,7 @@
  *= require_self
  */
 
-h1,h3, .navbar-brand, #cidade {
+h1,h3, .navbar-brand {
 	text-shadow: black 2px 2px 2px;
 	color: #FFE8DD;
 	font-family: 'Rock Salt', cursive;
@@ -32,9 +32,23 @@ body{
 	background: #FFE8DD;
 }
 
-.banner {
-    position: relative;
-    box-shadow: #313233 5px 5px 20px;
+.show-city{
+	max-height: 400px;
+	width: 100%;
+}
+
+.banner, .show-city {
+  position: relative;
+  box-shadow: #313233 5px 5px 20px;
+}
+
+#cidade{
+	position: absolute;
+	top: 400px;
+	right: 28px;
+	color: #FFE8DD;
+	font-family: 'Rock Salt', cursive;
+	text-shadow: #313233 2px 2px 2px;
 }
 
 .bottomright {
@@ -63,16 +77,29 @@ body{
 	color: #FFE8DD;
 }
 
-.citi ,#city-name{
+.citi ,#city-name, .comment{
 	text-shadow: #313233 2px 2px 2px;
 	font-family: 'Nobile', sans-serif;
 	color: #FFE8DD;
 	text-decoration: none;
 }
 
-#city-name:hover{
-	color: #77B2AD;
+.comment{
+	font-family: 'Gloria Hallelujah', cursive;
+	text-shadow: #313233 2px 2px 2px;	
+	color: #FFA17A;
+}
+
+#city-name:hover, h3 .comment:hover{
+	color: #FFE8DD;
+	text-decoration: none;
 	text-shadow: #313233 2px 2px 2px;
+}
+
+.profile{
+	box-shadow: #313233 2px 2px 2px;
+	height: 200px;
+	width: 200px;
 }
 
 
@@ -82,8 +109,6 @@ body{
 	width: 350px;
 }
 
-/*San Francisco*/
-
-#cidade{
-
+.caption{
+	text-shadow: black 2px 2px 2px;
 }
