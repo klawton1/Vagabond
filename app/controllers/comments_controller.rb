@@ -28,7 +28,12 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     current_user.comments << @comment
     @city.comments << @comment
-    redirect_to comment_path(@comment)
+    if @comment.text.length < 1|| @comment.text.length > 200
+      flash[:Error] = "Comment needs to be between 1 and 200 characters."
+      redirect_to new_comment_path(params[:city_id])
+    else
+      redirect_to comment_path(@comment)
+    end
   end
 
   def destroy
