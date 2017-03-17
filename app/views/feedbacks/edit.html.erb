@@ -1,0 +1,10 @@
+<%= render "layouts/banner" %>
+<div class="col-md-8 col-md-8 col-md-8 col-md-8 col-md-offset-2">
+  <h2>Give Some Feedback</h2>
+  <%= form_for @feedback, url: {action: 'update'} do |f| %>
+    <%= f.text_area :text, placeholder: "Your thoughts on this post?", size: "70x10", required: true, value: @feedback.text %>
+    <br>
+    <%= f.submit "Save", class: "btn btn-default" %>
+    <%= link_to "Back", comment_path(@feedback.comment), class: "btn btn-default"%>
+  <% end %>
+</div>
