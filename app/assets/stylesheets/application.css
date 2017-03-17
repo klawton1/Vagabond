@@ -127,3 +127,9 @@ body{
 .border{
 	border: white solid 2px;
 }
+
+/*profile*/
+
+.profile-comment{
+	font-family: 'Nobile', sans-serif;
+}
