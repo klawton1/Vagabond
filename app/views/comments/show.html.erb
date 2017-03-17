@@ -1,7 +1,7 @@
 <%= render "layouts/banner" %>
-<div class="row">
-  <div class="col-xs-4 col-sm-4 col-offset-md-1 col-md-4 col-lg-4">
-    <%= image_tag @comment.user.image, alt: "Profile Pic", size: "200x200"%>
+<div class="row teal">
+  <div class="col-xs-4 col-sm-4 col-offset-md-1 col-md-4 col-lg-4 text-center">
+    <%= image_tag @comment.user.image, alt: "Profile Pic", size: "200x200", class: "border"%>
     <p><%= @comment.user.name%></p>
     <p>Date Joined: <%= time_tag @comment.user.created_at%></p>
     <p>Current City: <%= @comment.user.current_city%></p>
@@ -11,10 +11,10 @@
     <h4><%= @comment.user.name%> about <%= @comment.city.name%>:</h4>
     <%= time_tag @comment.user.created_at%>
     <div>
-      <h3><%= @comment.title %></h3>
+      <h3 class="teal"><%= @comment.title %></h3>
       <p><%= @comment.text %></p>
     </div>
-    <h5><%= link_to "Give Feedback", new_feedback_path(@comment)%></h5>
+    <h5><%= link_to "Give Feedback", new_feedback_path(@comment), :class => "btn btn-default"%></h5>
     <% if !@comment.feedbacks.empty?%>  
       <h2><small>Feedback:</small></h2> 
       <div>
