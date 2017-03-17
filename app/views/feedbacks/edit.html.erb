@@ -1,6 +1,6 @@
 <%= render "layouts/banner" %>
-<div class="col-md-8 col-md-8 col-md-8 col-md-8 col-md-offset-2">
-  <h2>Give Some Feedback</h2>
+<div class="col-md-8 col-md-8 col-md-8 col-md-8 col-md-offset-3">
+  <h4>Give Some Feedback</h4>
   <%= form_for @feedback, url: {action: 'update'} do |f| %>
     <%= f.text_area :text, placeholder: "Your thoughts on this post?", size: "70x10", required: true, value: @feedback.text %>
     <br>

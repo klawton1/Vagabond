@@ -90,7 +90,7 @@ body{
 }
 
 .comment{
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Nobile', cursive;
 	text-shadow: #313233 2px 2px 2px;	
 	color: #FFA17A;
 }
@@ -118,8 +118,6 @@ body{
 	text-shadow: black 2px 2px 2px;
 }
 
-.editBtn:before   { content: "\270E"; }
-.deleteBtn:before {content: "\2718";}
 
 /*Comment page*/
 
