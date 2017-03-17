@@ -14,11 +14,9 @@
       </div>
   	  <%= hidden_field_tag('city_id', @city_id)%>
   	  <div class="text-center">
-  		<%= f.submit "Submit", :class => "btn btn-default" %> 
-  	  </div>
-	<% end %>
-	<div class="btn btn-default">
-	  <%= link_to "Back to City", city_path(@comment.city) %>
-	</div>
+    		<%= f.submit "Submit", :class => "btn btn-default" %> 
+    	  <%= link_to "Back", city_path(@comment.city), class: "btn btn-default" %>
+      </div>
+  <% end %>
   </div>
 </div>
