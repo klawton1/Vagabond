@@ -115,3 +115,15 @@ body{
 
 .editBtn:before   { content: "\270E"; }
 .deleteBtn:before {content: "\2718";}
+
+/*Comment page*/
+
+.teal{
+	text-shadow: none;
+	font-family: 'Nobile', sans-serif;
+	color:black;
+}
+
+.border{
+	border: white solid 2px;
+}
