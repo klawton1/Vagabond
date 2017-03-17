@@ -32,14 +32,8 @@ body{
 	background: #FFE8DD;
 }
 
-.show-city{
-	max-height: 400px;
-	width: 100%;
-}
-
 .banner, .show-city {
   position: relative;
-  box-shadow: #313233 5px 5px 20px;
 }
 
 #cidade{
@@ -51,21 +45,22 @@ body{
 	text-shadow: #313233 2px 2px 2px;
 }
 
+.thumbnail{
+	background-color: teal;
+}
+
 .bottomright {
   position: absolute;
   bottom: 8px;
   right: 16px;
 }
 
-.thumbnail{
-	box-shadow: #313233 5px 5px 20px;
-	border: #279E98 1px;
+#teal{
 	background: #279E98;
-	padding: 5px;
-	margin-right: 5%;
 }
 
 .navbar{
+	margin-bottom:-101px;
 	background: #279E98;
 }
 
@@ -77,21 +72,39 @@ body{
 	color: #FFE8DD;
 }
 
-.citi ,#city-name, .comment{
+#city-name, .comment{
 	text-shadow: #313233 2px 2px 2px;
-	font-family: 'Nobile', sans-serif;
+	font-family: 'Rock Salt', cursive;
 	color: #FFE8DD;
 	text-decoration: none;
 }
 
+.citi{
+	text-shadow: #313233 2px 2px 2px;	
+	color: white;
+}
+
 .comment{
-	font-family: 'Gloria Hallelujah', cursive;
 	text-shadow: #313233 2px 2px 2px;	
 	color: #FFA17A;
 }
 
+.Addcomment{
+	text-shadow: #313233 2px 2px 2px;
+	font-family: 'Rock Salt', cursive;
+	color: teal;
+	text-decoration: none;
+}
+
+.Addcomment:hover{
+	text-shadow: #313233 2px 2px 2px;
+	font-family: 'Rock Salt', cursive;
+	color: white;
+	text-decoration: none;
+}
+
 #city-name:hover, h3 .comment:hover{
-	color: #FFE8DD;
+	color: black;
 	text-decoration: none;
 	text-shadow: #313233 2px 2px 2px;
 }

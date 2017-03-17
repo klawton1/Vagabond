@@ -12,9 +12,8 @@
   </head>
 
   <body>
-    <div class="container-fluid">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div>
           <div class="navbar-header">
           <!-- collapse navbar -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
@@ -23,7 +22,7 @@
               <span class="icon-bar"></span> 
             </button>
           <!-- collapse navbar -->
-            <a><%= link_to "Vagabond", root_path, :class =>"navbar-brand",:id=>"header" %></a>
+            <%= link_to "Vagabond", root_path, :class =>"navbar-brand",:id=>"header" %>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -44,6 +43,6 @@
       <% end %>
 
     <%= yield %>
-    </div>
+
   </body>
 </html>
