@@ -1,18 +1,29 @@
 <%= render "layouts/banner" %>
-Sign Up
 
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :name, placeholder: "Name", required: true %>
+<div class="form-horizontal">
+  <div class="container">
+    <h4 class="text-center">Sign Up</h4>
+
+    <%= form_for @user do |f| %>
+      <div class="form-group">
+        <label for="inputName" class="col-sm-6 control-label">Name</label>
+        <%= f.text_field :name, placeholder: "Nathan", required: true %>
+      </div>
+      <div class="form-group">
+        <label for="inputCity" class="col-sm-6 control-label">City</label>
+        <%= f.text_field :current_city, placeholder: "City", required: true %>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-sm-6 control-label">Name</label>
+        <%= f.text_field :email, placeholder: "example@email.com", required: true %>
+      </div>
+      <div class="form-group">
+        <label for="Password" class="col-sm-6 control-label">Password</label>
+        <%= f.password_field :password, placeholder: "notgonnatellyou", required: true %>
+      </div>
+      <div class="text-center">
+        <%= f.submit "Sign Up", :class => "btn btn-default"%>
+      </div>
+    <% end %>
   </div>
-  <div>
-    <%= f.text_field :current_city, placeholder: "City", required: true %>
-  </div>
-  <div>
-    <%= f.text_field :email, placeholder: "Email", required: true %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password", required: true %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %>
+</div>
