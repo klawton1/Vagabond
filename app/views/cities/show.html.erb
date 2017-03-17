@@ -1,8 +1,8 @@
 <%= image_tag @city.image, class: "img-responsive show-city"%>
 
 <h2 id="cidade"><%= @city.name %></h2>
-<br>
-<h2 class="text-center"><%= link_to "Add A New Comment", new_comment_path(@city)%></h2>
+<h2 class="text-center"><%= link_to "Add A New Comment", new_comment_path(@city), class: "Addcomment"%></h2>
+  <br>
 <% @comments.each do |comment| %>
   <div class="thumbnail row">
     <figure class="figure col-md-2">
