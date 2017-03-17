@@ -27,7 +27,9 @@
         <label for="inputPassword" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Password:</label>
         <%= f.password_field :password, placeholder: "#{@user.password}" %>
       </div>
-      <%= f.submit "Save", :class => "btn btn-default"  %>
+      <div class="text-center">
+        <%= f.submit "Save", :class => "btn btn-default"  %>
+      </div>
     <% end %>
   </div>
 </div>
