@@ -1,11 +1,15 @@
 <%= render "layouts/banner" %>
+<div class="text-center">	
 <%= form_for @comment do |f| %>
-  <div>
-    <%= f.text_field :title, placeholder: "Title", required: true %>
+	<div>
+    <%= f.text_field :title, placeholder: "Title", required: true, :class=>"col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 text-center" %>
   </div>
   <div>
-    <%= f.text_area :text, placeholder: "Add a review here", required: true %>
+    <%= f.text_area :text, placeholder: "Add a review here", required: true, :class=>"col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 text-center" %>
   </div>
+  <div class="col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 text-center"> 	
   <%= hidden_field_tag('city_id', @city_id)%>
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", :class => "btn btn-default"%>
+  </div>
 <% end %>
+</div>

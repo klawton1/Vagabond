@@ -8,23 +8,23 @@
     
     <%= form_for @user do |f| %>
       <div class="form-group">
-        <label for="inputImage" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Image:</label>
+        <label for="inputImage" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 control-label">Image:</label>
           <%= f.text_field :image, placeholder: "#{@user.image}" %>
       </div>
       <div class="form-group">
-        <label for="inputName" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Name:</label>
+        <label for="inputName" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 control-label">Name:</label>
         <%= f.text_field :name, placeholder: "#{@user.name}" %>
       </div>
       <div class="form-group">
-        <label for="inputCity" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Current City:</label>
+        <label for="inputCity" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 control-label">Current City:</label>
         <%= f.text_field :current_city, placeholder: "#{@user.current_city}" %>
       </div>
       <div class="form-group">
-        <label for="inputEmail" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Email:</label>
+        <label for="inputEmail" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 control-label">Email:</label>
         <%= f.text_field :email, placeholder: "#{@user.email}" %>
       </div>
       <div class="form-group">
-        <label for="inputPassword" class="col-xs-6 col-sm-6 col-dm-6 col-lg-6 control-label">Password:</label>
+        <label for="inputPassword" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 control-label">Password:</label>
         <%= f.password_field :password, placeholder: "#{@user.password}" %>
       </div>
       <div class="text-center">
