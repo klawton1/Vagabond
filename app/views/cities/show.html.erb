@@ -1,6 +1,7 @@
+<div class="banner">  
 <%= image_tag @city.image, class: "img-responsive show-city"%>
-
-<h2 id="cidade"><%= @city.name %></h2>
+<h2 id="cidade" class="bottomright"><%= @city.name %></h2>
+</div>
 <br>
 <h2 class="text-center"><i><%= link_to "Add A New Comment", new_comment_path(@city)%></i></h2>
 <% @comments.each do |comment| %>
