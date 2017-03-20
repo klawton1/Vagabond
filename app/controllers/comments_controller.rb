@@ -1,21 +1,32 @@
 class CommentsController < ApplicationController
+  
   def show
     @comment = Comment.find_by_id(params[:id])
   end
+
   def edit
     @comment = Comment.find_by_id(params[:id])
+    if !current_user || current_user != @comment.user
+      flash[:error] = "NO"
+      redirect_to root_path
+    end
   end
 
   def update
     @comment = Comment.find_by_id(params[:id])
-    @comment.update(comment_params)
-    if !@comment.save
-      flash[:error] = "Bad Update to comments"
+    if !current_user || current_user != @comment.user
+      flash[:error] = "NO"
       redirect_to root_path
+    else
+      @comment.update(comment_params)
+      if !@comment.save
+        flash[:error] = "Bad Update to comments"
+        redirect_to root_path
+      end
+      redirect_to comment_path(@comment)
     end
-    redirect_to comment_path(@comment)
-
   end
+
   def new
     if !current_user
       redirect_to login_path
@@ -23,7 +34,11 @@ class CommentsController < ApplicationController
     @city_id = params[:city_id]
     @comment = Comment.new()
   end
+
   def create
+    if !current_user
+      redirect_to login_path
+    end
     @city = City.find_by_id(params[:city_id])
     @comment = Comment.new(comment_params)
     current_user.comments << @comment
@@ -38,6 +53,10 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    if !current_user || current_user != @comment.user
+      flash[:error] = "NO"
+      redirect_to root_path
+    end
     city_id = @comment.city.id
     @comment.destroy
     redirect_to city_path(city_id)
